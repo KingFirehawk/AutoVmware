@@ -34,23 +34,24 @@ def try_():
         time.sleep(10)
 
 
-# first one
-instances = 5
-times = 7
-add = 146
-for x in range(instances):
-    for y in range(instances):
+never_stop = 0
+while never_stop is 0:
+    instances = 5
+    times = 7
+    add = 146  # to start at instance 1 = 146, 2 = 236, 3 = 326, 4 = 416, 5 = 506, 6 = 596, 7 = 686
+    for x in range(instances):
+        for y in range(instances):
 
-        call_opening()  # 1
-        try_()
-        get_window("VMware Workstation")
-        click_opening(add)  # calls def
-        add += 18
-    print(datetime.datetime.now())
-    time.sleep(11400)  # waits 3 hours
-    os.startfile('C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware.exe')
-    time.sleep(10)
-    os.system('TASKKILL /F /IM vmware.exe')
+            call_opening()  # 1
+            try_()
+            get_window("VMware Workstation")
+            click_opening(add)  # calls def
+            add += 18
+        print(datetime.datetime.now())
+        time.sleep(11400)  # waits 3 hours
+        os.startfile('C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware.exe')
+        time.sleep(10)
+        os.system('TASKKILL /F /IM vmware.exe')
 
 
 # Helpful code
